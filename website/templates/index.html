@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+<!-- load static使う場合は　　（cssみたいなもの）　　先頭に入れてね-->
+{% block main %}
+{% if username == "Cana" %}
+<h1>自分です。</h1>
+{% elif username %}
+<h1>{{ username }}さん、ようこそ！Canaのホームページです。</h1>
+{% else %}
+<h1>匿名ユーザーさん、ようこそ！Canaのホームページです。</h1>
+
+{% endif %}
+<!-- <img src="path/to/image.jpg" alt="画像の説明文"> -->
+<img src="{% static 'bara.png' %}" alt="バラの画像">
+
+<p>リファレンス</p>
+<p>これはtemplates/index.htmlです、base・_navbar・_footer各htmlで構成。views.py にユーザー名を以下のように書き込む</p>
+<pre><code>ctxt["username"] = "ヌートバー"</code></pre>
+
+<a href="https://www.youtube.com/watch?v=b6XnrM_zK1s&list=PLuCS8p0T7ozK4Ne1e5eAVG2R5Gbs1naix&index=2">参考です前回</a>
+<a href="https://youtu.be/b6XnrM_zK1s?list=PLuCS8p0T7ozK4Ne1e5eAVG2R5Gbs1naix&t=557">次回ここから</a>
+{% endblock %}
