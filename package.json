@@ -4,13 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "vercel-build": "python3 manage.py collectstatic --noinput"
   },
   "author": "",
   "license": "ISC"
-}
-{
-  "scripts": {
-    "vercel-build": "python3 manage.py collectstatic --noinput"
-  }
 }
