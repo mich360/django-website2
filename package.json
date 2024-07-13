@@ -10,3 +10,6 @@
   "author": "",
   "license": "ISC"
 }
+// 提供された package.json ファイルは、Node.js プロジェクトのためのものではなく、Django プロジェクトのためのものに見えます。Django プロジェクトの場合、通常は package.json ファイルは不要ですが、Vercelのデプロイプロセスで静的ファイルをビルドする必要がある場合、必要なスクリプトを追加することがあります。
+
+// ただし、提供された package.json ファイル自体に大きな誤りは見当たりません。プロジェクトに合わせて vercel-build スクリプトが追加されているようです。このスクリプトは python3 manage.py collectstatic --noinput を実行して、Vercelデプロイ時に静的ファイルを収集するためのものです。
